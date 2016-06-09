@@ -1,3 +1,83 @@
-<h2 id="title">Welcome to Ember</h2>
+<div style="background:#f6f6f6; font-size:16px;">
+  <div style="display:inline-block">
+    <label>
+      lang
+    </label>
+    <div>
+      {{input value=lang}}
+    </div>
+  </div>
+  <div style="display:inline-block">
+    <label>
+      disabled
+    </label>
+    <div>
+      {{input checked=disabled type="checkbox"}}
+    </div>
+  </div>
 
-{{outlet}}
+  <div style="display:inline-block">
+    <label>
+      placeholder
+    </label>
+    <div>
+      {{input value=placeholder}}
+    </div>
+  </div>
+
+  <div style="display:inline-block">
+    <label>
+      semantic
+    </label>
+    <div>
+      {{input checked=semantic type="checkbox"}}
+    </div>
+  </div>
+
+  <div style="display:inline-block">
+    <label>
+      removeformatPasted
+    </label>
+    <div>
+      {{input checked=removeformatPasted type="checkbox"}}
+    </div>
+  </div>
+
+  <div style="display:inline-block">
+    <label>
+      resetCss
+    </label>
+    <div>
+      {{input checked=resetCss type="checkbox"}}
+    </div>
+  </div>
+
+  <div style="display:inline-block">
+    <label>
+      autogrow
+    </label>
+    <div>
+      {{input checked=autogrow type="checkbox"}}
+    </div>
+  </div>
+
+  <div>
+    <label>html</label>
+    <div>
+      {{textarea value=html rows=5 cols=80}}
+    </div>
+  </div>
+
+  {{trumbowyg-editor
+    html=html
+    lang=lang
+    disabled=disabled
+    placeholder=placeholder
+    semantic=semantic
+    autogrow=autogrow
+    resetCss=resetCss
+    removeformatPasted=removeformatPasted
+    change=(action (mut html))
+  }}
+
+</div>
