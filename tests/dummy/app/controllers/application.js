@@ -1,16 +1,16 @@
 import Ember from 'ember';
 
-function debouncedSetter(key){
-  const set = function(value){
-      this.set(key, value);
-  };
+function debouncedSetter(key, wait = 500){
+  function set(value){
+    this.set(key, value);
+  }
 
   return Ember.computed(key, {
     get(){
       return this.get(key);
     },
     set(key, value){
-      Ember.run.debounce(this, set, value, 500);
+      Ember.run.debounce(this, set, value, wait);
       return value;
     }
   });

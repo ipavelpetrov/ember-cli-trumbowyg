@@ -51,7 +51,7 @@ export default Ember.Component.extend({
   },
 
   _isAttrChanged(attrs, attrName){
-    return Ember.get(attrs, `newAttrs.${attrName}.value`) !== Ember.get(attrs, `oldAttrs.${attrName}.value`)
+    return Ember.get(attrs, `newAttrs.${attrName}.value`) !== Ember.get(attrs, `oldAttrs.${attrName}.value`);
   },
 
   didInsertElement(){
