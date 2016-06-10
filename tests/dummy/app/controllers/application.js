@@ -18,5 +18,23 @@ function debouncedSetter(key){
 
 export default Ember.Controller.extend({
   debouncedLang: debouncedSetter("lang"),
-  debouncedPlaceholder: debouncedSetter("placeholder")
+  debouncedPlaceholder: debouncedSetter("placeholder"),
+
+  resetCss: true,
+  semantic: false,
+
+  btns: [
+    ['viewHTML'],
+    ['undo', 'redo'],
+    ['formatting'],
+    'btnGrp-design',
+    ['link'],
+    ['image'],
+    'btnGrp-justify',
+    'btnGrp-lists',
+    ['foreColor', 'backColor'],
+    ['preformatted'],
+    ['horizontalRule'],
+    ['fullscreen']
+  ]
 });
