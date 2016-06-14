@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-trumbowyg",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Ember Addon for Trumbowyg WYSIWYG editor",
   "directories": {
     "doc": "doc",
@@ -15,7 +15,7 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Pavel Petrov <ipavelpetrov@ya.ru>",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.2",

@@ -1,26 +1,54 @@
 # Ember-cli-trumbowyg
 
-This README outlines the details of collaborating on this Ember addon.
+Ember Addon for [Trumbowyg](https://alex-d.github.io/Trumbowyg/) WYSIWYG editor.
+
+# Getting Started
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+In your ember-cli project, install this addon from npm 
 
-## Running
+```
+ember install ember-cli-trumbowyg --save-dev
+```
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+## Usage
 
-## Running Tests
+```
+  {{trumbowyg-editor
+    html=html
+    btns=btns
+    lang=lang
+    disabled=disabled
+    placeholder=placeholder
+    semantic=semantic
+    autogrow=autogrow
+    resetCss=resetCss
+    removeformatPasted=removeformatPasted
+    change=(action (mut html))
+  }}
+```
 
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+## Options 
+See [Trumbowyg docs](https://alex-d.github.io/Trumbowyg/documentation.html)
 
-## Building
+## Importing specific languages and plugins
+By default, all available trumbowyg languages and plugins will be imported into the project. You can optionally specify exactly which languages and plugins should be imported to the project via the 'langs' and 'plugins' options, which accepts an array of names.
 
-* `ember build`
+```
+  /* your ember-cli-build.js */
 
-For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
+  ...
+
+  var app = new EmberAddon(defaults, {
+    'ember-cli-trubowyg': {
+      // array of language names
+      langs: ['ru', 'fr'],
+      // array of plugin names
+      plugins: ['colors']
+    }
+  });
+
+  ...
+
+```
