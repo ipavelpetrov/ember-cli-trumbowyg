@@ -14,7 +14,7 @@ ember install ember-cli-trumbowyg --save-dev
 
 ## Usage
 
-```
+```handlebars
   {{trumbowyg-editor
     html=html
     btns=btns
@@ -35,7 +35,7 @@ See [Trumbowyg docs](https://alex-d.github.io/Trumbowyg/documentation.html)
 ## Importing specific languages and plugins
 By default, all available trumbowyg languages and plugins will be imported into the project. You can optionally specify exactly which languages and plugins should be imported to the project via the 'langs' and 'plugins' options, which accepts an array of names.
 
-```
+```javascript
   /* your ember-cli-build.js */
 
   ...
